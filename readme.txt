@@ -1,1 +1,1 @@
-Git, help me out.
+Git is useful.

@@ -8,8 +8,12 @@ compiler:
     - clang
     - gcc
 
-install:
-    - if ["$CXX" == "g++"]; then sudo apt-get install -qq g++-4.8; fi
-    - if ["$CXX" == "g++"]; then export CXX="g++-5"; fi
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-5
+      - gcc-5
 script:
     - make
